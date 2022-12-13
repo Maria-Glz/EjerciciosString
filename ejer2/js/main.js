@@ -30,11 +30,10 @@ btnEnviar.addEventListener("click", function(event){
     alertError.style.display="block";
     alertError.innerHTML += "<br/> El correo electronico no es valido.";
   }
-  let RFCRegex = / /;
+  let RFCRegex = /^[A-Z]{4}[0-9]{6}[A-Z0-0]{3}$/;
   if (exampleFormControlInput2.value.match(RFCRegex) == null){
     alertError.style.display="block";
     alertError.innerHTML += "<br/> El RFC no es valido.";
-
   }
 
 
