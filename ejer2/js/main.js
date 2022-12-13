@@ -6,6 +6,8 @@ btnEnviar.addEventListener("click", function(event){
 
   let exampleFormControlInput1 = document.getElementById("exampleFormControlInput1");
   let exampleFormControlTextarea1 = document.getElementById("exampleFormControlTextarea1");
+  let exampleFormControlInput2 = document.getElementById("exampleFormControlInput2");
+  
   let alertError = document.getElementById("alertError");
   exampleFormControlTextarea1.value= exampleFormControlTextarea1.value.trim(); 
   alertError.style.display="none";
@@ -27,6 +29,12 @@ btnEnviar.addEventListener("click", function(event){
   {
     alertError.style.display="block";
     alertError.innerHTML += "<br/> El correo electronico no es valido.";
+  }
+  let RFCRegex = / /;
+  if (exampleFormControlInput2.value.match(RFCRegex) == null){
+    alertError.style.display="block";
+    alertError.innerHTML += "<br/> El RFC no es valido.";
+
   }
 
 
